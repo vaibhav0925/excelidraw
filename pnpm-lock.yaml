@@ -111,9 +111,6 @@ importers:
         specifier: ^22.15.3
         version: 22.15.3
     devDependencies:
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: 'link:'
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
