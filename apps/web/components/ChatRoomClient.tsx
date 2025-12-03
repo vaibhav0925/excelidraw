@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useSocket } from "../hooks/useSocket";
 
 
-export function ChatRoomCient({messages,id}:{messages:{message:string}[], id:string}){
+export function ChatRoomClient({messages,id}:{messages:{message:string}[], id:string}){
     const [chats, setChats] = useState(messages);
     const [currentMessage, setCurrentMessage] = useState("");
     const {socket, loading} = useSocket();
@@ -12,22 +12,23 @@ export function ChatRoomCient({messages,id}:{messages:{message:string}[], id:str
 
     useEffect(() => {
         if(socket && !loading){
-            socket.onmessage = (event) => {
-
-                socket.send(JSON.stringify({
+            
+            socket.send(JSON.stringify({
                     type: "join_room",
                     roomId: id
-                }));
-
+            }));
+            
+            socket.onmessage = (event) => {
                 const parsedData = JSON.parse(event.data);
                 if(parsedData.type === "chat"){
                     setChats(c => [...c, {message:parsedData.message}])
                 }
             }
         }
+
     }, [socket, loading, id])
     return<div>
-        {messages.map(m => <div>{m.message}</div>)}
+        {chats.map((m, i) => <div key={i}>{m.message}</div>)}
 
         <input type="text" value={currentMessage} onChange={e => {
             setCurrentMessage(e.target.value);
