@@ -14,9 +14,9 @@ export default function Home() {
             <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
             <a href="#github" className="text-gray-600 hover:text-gray-900 transition-colors">GitHub</a>
-            <a href="/signup" className="bg-red-500 px-5 py-2 rounded-lg text-white hover:text-gray-900 transition-colors">Sign Up</a>
-            <a href="/signin" className="bg-red-500 px-5 py-2 rounded-lg text-white hover:text-gray-900 transition-colors">Sign In</a>
-            <button className="bg-emerald-600 text-white px-6 py-2.5 rounded-lg hover:bg-emerald-700 transition-all hover:shadow-lg">
+            <a href="/signup" className="bg-emerald-500 px-5 py-2 rounded-lg text-white hover:text-gray-900 transition-colors">Sign Up</a>
+            <a href="/signin" className="bg-emerald-500 px-5 py-2 rounded-lg text-white hover:text-gray-900 transition-colors">Sign In</a>
+            <button className="bg-emerald-500 text-white px-6 py-2.5 rounded-lg hover:bg-emerald-700 transition-all hover:shadow-lg">
               Get Started
             </button>
           </div>

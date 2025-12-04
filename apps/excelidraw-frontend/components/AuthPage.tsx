@@ -12,7 +12,7 @@ export function AuthPage({isSignin}:{
                 <input type="password" placeholder="Password"></input>
             </div>
             <div className="pt-2">
-                <button className="bg-red-200 rounded p-2" onClick={()=>{
+                <button className="bg-emerald-200 rounded p-2" onClick={()=>{
 
                 }}>{isSignin ? "Sign In": "Sign Up"}</button>
             </div>
